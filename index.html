@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta del Clima — Trabajo Final JS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Consulta del Clima</h1>
+        <p class="app__subtitle">
+          Busca el clima actual de cualquier ciudad usando la API de Open-Meteo
+        </p>
+      </header>
+
+      <section class="search" aria-label="Buscar ciudad">
+        <form id="search-form" class="search__form">
+          <label class="visually-hidden" for="city-input">Nombre de la ciudad</label>
+          <input
+            id="city-input"
+            class="search__input"
+            type="search"
+            placeholder="Ej.: Ciudad de México, Madrid, Tokio..."
+            autocomplete="off"
+            required
+          />
+          <button id="search-btn" class="search__btn" type="submit">Consultar</button>
+        </form>
+        <button id="sample-btn" class="search__btn search__btn--secondary" type="button">
+          Ejemplo aleatorio
+        </button>
+      </section>
+
+      <p id="status-message" class="status" role="status" aria-live="polite"></p>
+
+      <section
+        id="weather-section"
+        class="weather weather--hidden"
+        aria-label="Resultado del clima"
+      >
+        <article id="weather-card" class="weather-card"></article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
